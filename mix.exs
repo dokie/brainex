@@ -3,12 +3,14 @@ defmodule Brainex.Mixfile do
 
   def project do
     [
+      name: "Brainex",
       app: :brainex,
       version: "0.1.0",
-      elixir: "~> 1.3",
+      elixir: "~> 1.2",
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod,
-      deps: deps()
+      deps: deps,
+      dialyzer: [plt_add_apps: [:mnesia]]
     ]
   end
 
@@ -31,6 +33,8 @@ defmodule Brainex.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      { :uuid, "~> 1.1" }
+    ]
   end
 end

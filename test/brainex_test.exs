@@ -1,8 +1,5 @@
-defmodule BrainexTest do
+defmodule BrainEx.ApplicationTest do
   use ExUnit.Case
-  doctest Brainex
+  doctest BrainEx.Application
 
-  test "the truth" do
-    assert 1 + 1 == 2
-  end
 end
